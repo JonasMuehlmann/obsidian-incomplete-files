@@ -24,8 +24,8 @@ export const checkIncompleteResourcesBook: IssueScanner = {
 
         const issues: RawIssue[] = [];
 
-        let title: string = "Incomplete book; ";
-        let authors: string[] = yamlObj.author;
+        const title: string = "Incomplete book; ";
+        const authors: string[] = yamlObj.author;
 
         if (authors == null || authors.length == 0)
         {
