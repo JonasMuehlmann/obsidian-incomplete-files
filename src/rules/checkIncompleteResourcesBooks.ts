@@ -3,7 +3,6 @@ import type { RawIssue } from "@/SettingsSchemas";
 import { INCOMPLETE_ISSUE_TYPE } from "./INCOMPLETE_ISSUE_TYPE";
 import { TFile } from "obsidian";
 import type { Data } from "@/util/getDataFromFile";
-import { title } from "process";
 
 
 export const checkIncompleteResourcesBook: IssueScanner = {
