@@ -5,6 +5,7 @@ import { checkIncompleteSyntax } from "@/rules/checkIncompleteSyntax";
 import { checkIncompleteResourcesBook } from "@/rules/checkIncompleteResourcesBooks";
 import { INCOMPLETE_ISSUE_TYPE } from "./INCOMPLETE_ISSUE_TYPE";
 import { checkIncompleteResourcesBlogArticles } from "@/rules/checkIncompleteResourcesBlogArticles";
+import { checkIncompleteResourcesPapers } from "@/rules/checkIncompleteResourcesPapers";
 
 export const issueScanners = [
 	checkEmptyContent,
@@ -12,6 +13,7 @@ export const issueScanners = [
 	checkIncompleteSyntax,
 	checkIncompleteResourcesBook,
 	checkIncompleteResourcesBlogArticles,
+	checkIncompleteResourcesPapers,
 ];
 
 export type IssueScanner = {
