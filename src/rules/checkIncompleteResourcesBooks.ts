@@ -30,13 +30,58 @@ export const checkIncompleteResourcesBook: IssueScanner = {
         const issues: RawIssue[] = [];
 
         const title: string = "Incomplete book; ";
-        const authors: string[] = yamlObj.author;
 
+        const authors: string[] = yamlObj.author;
         if (authors == null || authors.length == 0)
         {
             issues.push({
                 type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
                 title: title + "no author",
+            })
+        }
+
+        const series: string = yamlObj["series"];
+        if (series == null)
+        {
+            issues.push({
+                type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
+                title: title + "no series",
+            })
+        }
+
+        const publisher: string = yamlObj["publisher"];
+        if (publisher == null)
+        {
+            issues.push({
+                type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
+                title: title + "no publisher",
+            })
+        }
+
+        const publicationYear: string = yamlObj["year of publication"];
+        if (publicationYear == null)
+        {
+            issues.push({
+                type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
+                title: title + "no publication year",
+            })
+        }
+
+        const link: string = yamlObj["link"];
+        if (link == null)
+        {
+            issues.push({
+                type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
+                title: title + "no link",
+            })
+        }
+
+        const related: string = yamlObj["related to oos"];
+        if (related == null)
+        {
+            issues.push({
+                type: INCOMPLETE_ISSUE_TYPE.INCOMPLETE_BOOK,
+                title: title + "no related OOS",
             })
         }
 
