@@ -14,6 +14,11 @@ export const checkIncompleteResourcesBook: IssueScanner = {
 		default: true,
 	},
     func: (file: TFile, data: Data) => {
+        if (file.path.startsWith("Resources/Books/") == false)
+        {
+            return [];
+        }
+        
         const yamlObj = data.yamlObj;
 
         if (yamlObj == null)
