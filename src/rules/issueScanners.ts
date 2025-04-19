@@ -6,6 +6,7 @@ import { checkIncompleteResourcesBook } from "@/rules/checkIncompleteResourcesBo
 import { INCOMPLETE_ISSUE_TYPE } from "./INCOMPLETE_ISSUE_TYPE";
 import { checkIncompleteResourcesBlogArticles } from "@/rules/checkIncompleteResourcesBlogArticles";
 import { checkIncompleteResourcesPapers } from "@/rules/checkIncompleteResourcesPapers";
+import { checkIncompleteResourcesVideos } from "@/rules/checkIncompleteResourcesVideos";
 
 export const issueScanners = [
 	checkEmptyContent,
@@ -14,6 +15,7 @@ export const issueScanners = [
 	checkIncompleteResourcesBook,
 	checkIncompleteResourcesBlogArticles,
 	checkIncompleteResourcesPapers,
+	checkIncompleteResourcesVideos,
 ];
 
 export type IssueScanner = {
